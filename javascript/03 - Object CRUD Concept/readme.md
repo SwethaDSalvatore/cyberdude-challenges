@@ -3,21 +3,67 @@ This challenge is part of free internship (Fullstack Engineer) offered by [Cyber
 
 > Task #3: Create a object about ur self with all datatype values. And try to manipulate it.
 
-js
-// Paste your code here
-const example = "Awesome"
+// Create
+
+let myself = {
+  firstName: "Swetha",
+  lastName: "Ramesh",
+  age: 24,
+  isWorking: true,
+  hobbies: ["designing", "coding", "reading"],
+  address: {
+    street: "Dubai main Road, cross Street",
+    city: "Dubai",
+    pinCode: 123456,
+  },
+  introduce: function () {
+    console.log(`Hi, I'm ${this.firstName} ${this.lastName}. I'm ${this.age} years old.`);
+  },
+};
+
+// console.log(myself);
+
+// ................................
+// Read
+
+// console.log("Read about myself:");
+// console.log("First Name:", myself.firstName);
+// console.log("Last Name:", myself.lastName);
+// console.log("Age:", myself.age);
+// console.log("Is Working:", myself.isWorking);
+// console.log("Hobbies:", myself.hobbies.join(", "));
+// console.log("Address:", myself.address.street + ", " + myself.address.city + ", " + myself.address.pinCode);
+// myself.introduce();
+
+// console.log(`Read about myself:
+// First Name: ${myself.firstName}
+// age: ${myself.age}`)
+
+// ................................
+// Update
+
+// console.log("Updating information about myself:");
+// myself.age = 23;
+// myself.hobbies.push("Cooking");
+// myself.address.city = "Oslo, Norway 😉";
+
+// console.log("Updated Age:", myself.age);
+// console.log("Updated Hobbies:", myself.hobbies.join(", "));
+// console.log("Updated City:", myself.address.city);
 
 
-### Live link -> 
-Deploy it and put the link here.
+// ................................
+// Delete
+
+// console.log("Deleting information about myself:");
+// // myself = []
+// delete myself.isWorking;
+// console.log(myself);
+
+// ................................
 
 
-## Acknowledgement:
- - Any person who have helped you achieve this challenge. Mention them here. For example, look below.
- - Rajini [@rajini](https://github.com/rajini)
 
 ## References:
 
-Paste the `YOUTUBE_VIDEO_ID_HERE` with the video id.
-md
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Video Title")
+https://youtu.be/WebG_D9-U80?si=PEoiSAS0NwjeW-5Z Cyberdude - JS object
