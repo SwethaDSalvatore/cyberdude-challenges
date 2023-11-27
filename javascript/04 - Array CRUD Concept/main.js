@@ -47,7 +47,7 @@ let arrayRead = [1, 2, 3, 4, 5];
 // console.log(arrayRead.some((number) =>
 // number % 3 === 0));
 
-// find - find the first matching condition
+// find - find the first matching condition...
 // console.log(arrayRead.find((number) =>
 // number > 2));
 
