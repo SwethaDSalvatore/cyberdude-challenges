@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>forms</title>
+</head>
+
+<body class="bg-blue-950">
+  <div class="max-w-xl mx-auto bg-yellow-100 rounded p-10 space-y-5">
+    <!-- heading -->
+    <h1 class="text-center text-lg font-bold text-blue-950">ID CARD FORM</h1>
+    <!-- form questions -->
+    <form name="idcard-form" class="text-black">
+      <div class=" grid-cols-2 mb-4">
+        <label class="block text-gray-600 text-sm font-medium mb-2">Full Name:</label>
+        <input type="text" name="fullName" placeholder="Enter your name"
+          class="w-full p-2 border rounded focus:outline-none focus:border-blue-500" id="name-text" required data-error="Please enter your full name.">
+          <div class="text-red-500 text-sm mt-1" id="error-fullName"></div>
+      </div>
+      <div class=" grid-cols-2 mb-4">
+        <label class="block text-gray-600 text-sm font-medium mb-2">Select your gender:</label>
+        <div class="flex">
+          <label class="inline-flex items-center mr-4">
+            <input type="radio" name="gender" value="male" class="form-radio" checked>
+            <span class="ml-2">Male</span>
+          </label>
+          <label class="inline-flex items-center mr-4">
+            <input type="radio" name="gender" value="female" class="form-radio">
+            <span class="ml-2">Female</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="radio" name="gender" value="others" class="form-radio">
+            <span class="ml-2">others</span>
+          </label>
+        </div>
+      </div>
+      <div class=" grid-cols-2 mb-4">
+        <label class="block text-gray-600 text-sm font-medium mb-2">Employee ID NO :</label>
+        <input type="text" name="employeeId" placeholder="CORP ID (eg: CD54321)"
+          class="w-full p-2 border rounded focus:outline-none focus:border-blue-500" id="emp-text" required data-error="Invalid ID.">
+          <div class="text-red-500 text-sm mt-1" id="error-employeeId"></div>
+      </div>
+      <div class=" grid-cols-2 mb-4">
+        <label class="block text-gray-600 text-sm font-medium mb-2">E-mail :</label>
+        <input type="text" name="email" placeholder="username@gmail.com"
+          class="w-full p-2 border rounded focus:outline-none focus:border-blue-500" id="email-text" required data-error="Invalid E-mail ID".>
+          <div class="text-red-500 text-sm mt-1" id="error-email"></div>
+      </div>
+      <div class=" grid-cols-2 mb-4">
+        <label class="block text-gray-600 text-sm font-medium mb-2">Phone :</label>
+        <input type="text" name="phone" placeholder="(eg: +11 8089898989)"
+          class="w-full p-2 border rounded focus:outline-none focus:border-blue-500" id="phone-text" required data-error="Invalid number".>
+          <div class="text-red-500 text-sm mt-1" id="error-phone"></div>
+      </div>
+      <div class=" grid-cols-2 mb-4">
+        <label class="block text-gray-600 text-sm font-medium mb-2">Blood Group :</label>
+        <input type="text" name="bloodGroup" placeholder="A+/ A-/ B+/ B-/ AB+/ AB-/ O+/ O-"
+          class="w-full p-2 border rounded focus:outline-none focus:border-blue-500" id="bloodgrp-text" required data-error="Invalid data".>
+          <div class="text-red-500 text-sm mt-1" id="error-bloodGroup"></div>
+      </div>
+      <div class="grid-cols-2 mb-4">
+        <label class="block text-gray-600 text-sm font-medium mb-2">Joining Date :</label>
+        <div class="flex items-center space-x-4">
+          <div class="w-1/3">
+            <input type="text" id="day" name="day"
+              class="w-full p-2 border rounded focus:outline-none focus:border-blue-500" placeholder="DD" required data-error="Invalid data".>
+              <div class="text-red-500 text-sm mt-1" id="error-day"></div>
+          </div>
+
+          <div class="w-1/3">
+            <input type="text" id="month" name="month"
+              class="w-full p-2 border rounded focus:outline-none focus:border-blue-500" placeholder="MM" required data-error="Invalid data".>
+              <div class="text-red-500 text-sm mt-1" id="error-month"></div>
+          </div>
+
+          <div class="w-1/3">
+            <input type="text" id="year" name="year"
+              class="w-full p-2 border rounded focus:outline-none focus:border-blue-500" placeholder="YYYY" required data-error="Invalid data".>
+              <div class="text-red-500 text-sm mt-1" id="error-year"></div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- terms & condition -->
+    <div class="text-black">
+      <label class="block text-sm font-medium mb-2 underline">Terms And Condition :</label>
+      <ul class="list-disc pl-4 text-gray-600 space-y-2">
+        <li>Carry the ID card at all times during working hours for identification purposes.</li>
+        <li>The ID card is strictly for official use and should not be shared or used for unauthorized purposes.</li>
+        <li>Unauthorized use of the ID card, including lending it to others or allowing its use by someone else, is
+          strictly prohibited.</li>
+        <li>Lost or damaged cards should be reported to ID Card Cell (1st floor) for replacement.</li>
+        <li>A replacement fee may be charged.</li>
+      </ul>
+      <!--check box -->
+      <div class="flex justify-start items-center mt-4">
+        <input type="checkbox" class="form-checkbox mr-2" required data-error="Tick the box to proceed".>
+        <h4 class="text-sm font-semibold ">I agree to the above conditions</h4>
+        <div class="text-red-500 text-sm mt-1" id="error-message"></div>
+      </div>
+    </div>
+    <!-- submit -->
+    <div class="flex justify-center items-center text-white">
+      <button type="button" class="px-6 py-1 font-semibold rounded bg-blue-950 cursor-pointer mt-6"
+      id="btn" disabled>Submit</button>
+    </div>
+  </div>
+
+  <!-- output data -->
+  <div id="output" class="max-w-xl mx-auto mt-8 p-4 bg-yellow-100 rounded">
+    <h2 class="text-lg text-blue-950 font-bold mb-4">Review your details:</h2>
+    <div id="outputContent"></div>
+  </div>
+
+  <!-- js script -->
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>
