@@ -21,7 +21,7 @@ ID CARD FORM is a web application that utilizes JavaScript to dynamically manipu
 
 ## Demo
 
-[Live Demo](https://swethadsalvatore.github.io/forms-dom/)
+[Live Demo](https://swethadsalvatore.github.io/cyberdude-challenges/javasript-DOM/01-%20form/dist/)
 
 ## Features Added
 
