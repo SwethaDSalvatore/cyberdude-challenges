@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Store</title>
+</head>
+
+<body class="bg-red-400">
+  <!-- header -->
+  <div class="mt-5 max-w-xl mx-auto bg-yellow-100 rounded p-10 space-y-5">
+    <h1 class="text-center text-lg font-bold text-rose-500">Welcome To Task Store</h1>
+  </div>
+  <!-- form -->
+  <form name="taskForm" class="mt-5 max-w-xl mx-auto bg-yellow-100 rounded p-10 space-y-5">
+    <!-- name -->
+    <div class=" grid-cols-2 mb-4">
+      <label class="block text-rose-500 text-sm font-medium mb-2">Full Name:</label>
+      <input type="text" name="fullName" placeholder="Enter your name here"
+        class="w-full p-2 border rounded focus:outline-none focus:border-rose-300" required>
+    </div>
+    <!-- date -->
+    <div class="grid-cols-2 mb-4">
+      <label class="block text-rose-500 text-sm font-medium mb-2">Submission Date:</label>
+      <input type="date" name="datepicker" class="w-full p-2 border rounded focus:outline-none focus:border-rose-300">
+    </div>
+    <!-- task title -->
+    <div class=" grid-cols-2 mb-4">
+      <label class="block text-rose-500 text-sm font-medium mb-2">Task Title:</label>
+      <input type="text" name="taskTitle" placeholder="Enter your task title here"
+        class="w-full p-2 border rounded focus:outline-none focus:border-rose-300" required>
+    </div>
+    <!-- source code link -->
+    <div class=" grid-cols-2 mb-4">
+      <label class="block text-rose-500 text-sm font-medium mb-2">Source Code Link:</label>
+      <input type="text" name="sourceLink" placeholder="Paste your link here"
+        class="w-full p-2 border rounded focus:outline-none focus:border-rose-300" required>
+    </div>
+    <!-- live link -->
+    <div class=" grid-cols-2 mb-4">
+      <label class="block text-rose-500 text-sm font-medium mb-2">Project Live Link:</label>
+      <input type="text" name="liveLink" placeholder="Paste your link here"
+        class="w-full p-2 border rounded focus:outline-none focus:border-rose-300" required>
+    </div>
+
+    <button type="submit" class="px-3 py-2 w-full rounded bg-rose-500 hover:bg-red-400 text-yellow-100 font-bold">
+      Add This Task
+    </button>
+  </form>
+
+  <!-- output -->
+  <div class="mt-5 bg-yellow-100 rounded p-5 max-w-6xl mx-auto space-y-5" id="taskListCard">
+    <h1 class="text-center text-lg font-bold text-black"> Task List</h1>
+    <table class="min-w-full border border-rose-500 text-center">
+      <thead>
+        <tr>
+          <th class="py-2 px-4 bg-rose-500 border-b">T.No</th>
+          <th class="py-2 px-4 bg-rose-500 border-b">Name</th>
+          <th class="py-2 px-4 bg-rose-500 border-b">Date</th>
+          <th class="py-2 px-4 bg-rose-500 border-b">Task Title</th>
+          <th class="py-2 px-4 bg-rose-500 border-b">Options</th>
+        </tr>
+      </thead>
+      <tbody id="taskListTable">
+      </tbody>
+    </table>
+  </div>
+  <script type="module" src="./assets/js/utils.js"></script>
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>
