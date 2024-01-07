@@ -1,0 +1,35 @@
+    {
+        "recipeName": "Chocolate Cake",
+        "ingredients": [
+            "🛒 2 cups all-purpose flour",
+            "🛒 1 and 3/4 cups granulated sugar",
+            "🛒 3/4 cup unsweetened cocoa powder",
+            "🛒 1 and 1/2 teaspoons baking powder",
+            "🛒 1 and 1/2 teaspoons baking soda",
+            "🛒 1 teaspoon salt",
+            "🛒 2 large eggs",
+            "🛒 1 cup whole milk",
+            "🛒 1/2 cup vegetable oil",
+            "🛒 2 teaspoons pure vanilla extract",
+            "🛒  1 cup boiling water",
+            "🛒 1 cup chocolate chips (optional)"
+        ],
+        "instructions": [
+            "✔️ Preheat the oven to 350°F (175°C), grease and flour two 9-inch round cake pans.",
+            "✔️ In a large bowl, sift together flour, sugar, cocoa powder, baking powder, baking soda, and salt.",
+            "✔️ Add eggs, milk, oil, and vanilla extract, beat on medium speed for 2 minutes.",
+            "✔️ Stir in boiling water until the batter is well combined, the batter will be thin, but that's okay.",
+            "✔️ If desired, fold in chocolate chips.",
+            "✔️ Pour the batter evenly into the prepared pans.",
+            "✔️ Bake for 30 to 35 minutes or until a toothpick inserted into the center comes out clean.",
+            "✔️ Allow the cakes to cool in the pans for 10 minutes before transferring to a wire rack to cool completely.",
+            "✔️ Once cooled, you can frost and decorate the cake as desired."
+        ],
+        "notes": {
+            "difficulty": "Intermediate",
+            "prepTime": "15 minutes",
+            "bakingTime": "30-35 minutes",
+            "totalTime": "1 hour",
+            "servings": 12
+        }
+    }

@@ -63,12 +63,12 @@
 //   console.log(bottle);
 // }
 
-let count = 4
-while (count >= 1) {
+// let count = 4
+// while (count >= 1) {
 
-  console.log(count);
-  count--;
-}
+//   console.log(count);
+//   count--;
+// }
 function fibonacciGenerator(n) {
   let output = []
   if (n === 1) {

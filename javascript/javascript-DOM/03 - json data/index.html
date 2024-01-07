@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+  <title>Chocolate Cake Recipe</title>
+</head>
+
+<body class=" mx-auto bg-white font-custom">
+  <section class="mx-auto bg-orange-950 grid grid-cols-2">
+    <img src="https://i.pinimg.com/564x/6d/33/06/6d3306360a2d971b926fe56be548a8ac.jpg" alt="" class="w-full ">
+    <div class="mt-5">
+      <h1 class="text-violet-200 text-3xl  text-center p-4">Let's Bake Chocolate Cake At Home</h1>
+      <div>
+        <h2 class="text-violet-300 font-semibold text-center p-4 underline">Ingredients</h2>
+        <div id="ingredientsDetails" class="text-orange-300 p-4"></div>
+      </div>
+      <div>
+        <h2 class="text-violet-300 font-semibold text-center p-4 underline">Instructions</h2>
+        <div id="instructionsDetails" class="text-orange-300 p-4"></div>
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </section>
+  <section>
+    <table class="min-w-full bg-orange-950 border border-violet-950 text-center">
+      <thead>
+        <tr>
+          <th class="py-2 px-4 border-b border border-violet-950 text-violet-300">Difficulty</th>
+          <th class="py-2 px-4 border-b border border-violet-950 text-violet-300">Prep Time</th>
+          <th class="py-2 px-4 border-b border border-violet-950 text-violet-300">Baking Time</th>
+          <th class="py-2 px-4 border-b border border-violet-950 text-violet-300">Total Time</th>
+          <th class="py-2 px-4 border-b border border-violet-950 text-violet-300">Servings</th>
+        </tr>
+      </thead>
+      <tbody id="notesTable">
+      </tbody>
+    </table>
+  </section>
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>
