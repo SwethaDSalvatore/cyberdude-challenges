@@ -42,11 +42,11 @@
 
 // IIFE :
 
-((employeeName, basicSalary) => {
-    console.log(`Salary Slip of ${employeeName}`);
-    console.log(`Basic Salary: ${basicSalary}`);
-    let deductions = 0.1 * basicSalary;
-    console.log(`Deductions: ${deductions}`);
-    let netSalary = basicSalary - deductions;
-    console.log(`Net Salary: ${netSalary}`);
-})("Ms.Eva", 50000);
+// ((employeeName, basicSalary) => {
+//     console.log(`Salary Slip of ${employeeName}`);
+//     console.log(`Basic Salary: ${basicSalary}`);
+//     let deductions = 0.1 * basicSalary;
+//     console.log(`Deductions: ${deductions}`);
+//     let netSalary = basicSalary - deductions;
+//     console.log(`Net Salary: ${netSalary}`);
+// })("Ms.Eva", 50000);
