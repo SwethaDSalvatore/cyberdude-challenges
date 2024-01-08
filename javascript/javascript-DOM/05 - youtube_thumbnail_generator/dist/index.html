@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,200&display=swap" rel="stylesheet">
+  <title>YouTube Thumbnail Generator</title>
+  <script type="module" crossorigin src="./assets/index-NLnhBpmm.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-lhy4uMQd.css">
+</head>
+
+<body class="bg-slate-950 max-w-2xl mx-auto font-mono">
+  <div class="border border-sky-600 rounded p-5 mt-10">
+    <!-- heading -->
+    <h1 class="text-white text-xl text-center mt-4 p-4">👋 Welcome To YouTube Thumbnail Generator</h1>
+
+    <!-- generator form -->
+    <form name="form" id class="space-y-2 mt-5 p-2">
+      <label class="text-sky-600 text-lg font-medium mb-2">Paste Your YouTube Video Link Here:</label>
+      <input id="copiedLink" type="text" name="link" placeholder="https://www.youtube.com/"
+        class="w-full p-2 border rounded focus:outline-none focus:border-sky-600" required>
+      <button type="submit" class="mt-5 px-3 py-2 rounded bg-sky-800 hover:bg-sky-600 text-yellow-100 font-semibold">
+        Generate This Thumbnail</button>
+    </form>
+
+    <!-- output -->
+    <div class="mt-5 space-y-2 mb-10 p-2" id="outputCard">
+      <label class="text-sky-600 text-lg font-medium mb-2">Here Is Your Pasted Video YouTube Thumbnail:</label>
+      <img id="srcLink" class=" " src="https://i.ytimg.com/vi/[VIDEO_ID]/maxresdefault.jpg" alt="Thumbnail">
+    </div>
+  </div>
+</body>
+
+</html>
