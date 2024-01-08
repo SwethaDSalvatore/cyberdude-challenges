@@ -9,9 +9,9 @@ ingredientsDetailsEl.innerHTML = `${chocolateCakeRecipe.ingredients.join("<br>")
 instructionsDetailsEl.innerHTML = `${chocolateCakeRecipe.instructions.join("<br>")}`
 notesDetailsEl.innerHTML =
     `
-              <td class="py-2 px-4 border-b border border-violet-950  text-orange-300">${chocolateCakeRecipe.notes.difficulty}</td>
-              <td class="py-2 px-4 border-b border border-violet-950 text-orange-300">${chocolateCakeRecipe.notes.prepTime}</td>
-              <td class="py-2 px-4 border-b border border-violet-950 text-orange-300">${chocolateCakeRecipe.notes.bakingTime}</td>
-              <td class="py-2 px-4 border-b border border-violet-950 text-orange-300">${chocolateCakeRecipe.notes.totalTime}</td>
-              <td class="py-2 px-4 border-b border border-violet-950 text-orange-300">${chocolateCakeRecipe.notes.servings}</td>
+              <td class="p-1 sm:py-2 sm:px-4 border-b border border-violet-950  text-orange-300 text-xs sm:text-lg">${chocolateCakeRecipe.notes.difficulty}</td>
+              <td class="p-1 sm:py-2 sm:px-4 border-b border border-violet-950  text-orange-300 text-xs sm:text-lg">${chocolateCakeRecipe.notes.prepTime}</td>
+              <td class="p-1 sm:py-2 sm:px-4 border-b border border-violet-950  text-orange-300 text-xs sm:text-lg">${chocolateCakeRecipe.notes.bakingTime}</td>
+              <td class="p-1 sm:py-2 sm:px-4 border-b border border-violet-950  text-orange-300 text-xs sm:text-lg">${chocolateCakeRecipe.notes.totalTime}</td>
+              <td class="p-1 sm:py-2 sm:px-4 border-b border border-violet-950  text-orange-300 text-xs sm:text-lg">${chocolateCakeRecipe.notes.servings}</td>
             `
