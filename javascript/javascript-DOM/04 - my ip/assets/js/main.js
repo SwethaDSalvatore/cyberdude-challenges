@@ -8,7 +8,7 @@ xhr.onreadystatechange = function () {
             ipHolderEl.textContent = xhr.responseText;
         }
     } else {
-        ipHolderEl.innerHTML += `<span>Wrong</span>`
+        ipHolderEl.innerHTML += `<span>Not Found</span>`
     }
 }
 
