@@ -6,7 +6,7 @@ const apiUrl = "https://api.github.com/users/<USER-NAME>/repos";
 formEl.addEventListener("submit", (e) => {
     e.preventDefault();
 
-// validation
+    // validation
     function userName() {
         if (inputUserName.length > 5) {
             return inputUserName;
@@ -14,11 +14,11 @@ formEl.addEventListener("submit", (e) => {
             alert("Invalid Username");
         }
     }
-// calling input userName
+    // calling input userName
     const inputUserName = userNameEl.value;
     const gitUserName = userName();
 
-// repalce the api username with input name
+    // repalce the api username with input name
     const apiUrl = "https://api.github.com/users/<USER-NAME>/repos";
     const gitname = apiUrl.replace("<USER-NAME>", gitUserName);
 
