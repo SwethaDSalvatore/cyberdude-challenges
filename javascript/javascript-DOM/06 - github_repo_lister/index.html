@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap" rel="stylesheet">
+  <title>Github Repo Lister</title>
+</head>
+
+<body class="bg-fuchsia-950  max-w-2xl mx-auto p-4">
+  <!-- heading -->
+  <section class="mt-5">
+    <h1 class="text-fuchsia-200 text-6xl text-center font-CustomFont">Github Repository Lister</h1>
+  </section>
+
+  <!-- form -->
+  <form name="form" id class="space-y-2 sm:mt-5 p-2">
+    <label class="text-fuchsia-200 text-sm sm:text-xl font-medium mb-2">Select Your Github User Name Below:</label>
+    <select id="userName" name="UserName"
+      class="w-full px-3 py-2 border rounded focus:outline-none focus:border-fuchsia-600" required>
+      <option class="" value="UserName">Username</option>
+      <option class="" value="SwethaDSalvatore">SwethaDSalvatore</option>
+    </select>
+    <button type="submit"
+      class="px-6 py-1 rounded bg-fuchsia-800 hover:bg-fuchsia-600 text-fuchsia-100 text-sm sm:text-lg border border-fuchsia-300">
+      Check</button>
+  </form>
+
+  <!-- checking -->
+  <section
+    class="mt-5 flex space-x-10 items-center text-fuchsia-200 text-sm sm:text-xl bg-fuchsia-900 p-4 rounded border border-fuchsia-300">
+    <img src="https://avatars.githubusercontent.com/u/144040887?v=4" alt="profile avatar"
+      class="w-32 h-32 rounded-full border border-fuchsia-100">
+    <div class="space-y-2" id="confirm">
+      <h4>👋Hi I am <span class="font-semibold">"SwethaDSalvatore"</span></h4>
+      <h4>Are you Looking for My Github Repository List ?</h4>
+      <button type="submit"
+        class="px-6 py-1 rounded bg-fuchsia-950 hover:bg-fuchsia-900 text-fuchsia-100 text-sm sm:text-lg border border-fuchsia-300">
+        Yes</button>
+    </div>
+  </section>
+
+  <!-- list -->
+  <section
+    class="mt-5 text-fuchsia-200 text-sm sm:text-xl bg-fuchsia-900 p-4 rounded border border-fuchsia-300 space-y-4">
+    <h1>Here You Go !!</h1>
+    <table class="min-w-full bg-fuchsia-950 text-center rounded">
+      <thead>
+        <tr>
+          <th class="py-2 px-4 border">S.No</th>
+          <th class="py-2 px-4 border">Project Name</th>
+          <th class="py-2 px-4 border">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="py-2 px-4 border">1</td>
+          <td class="py-2 px-4 border">cyberdude challenges</td>
+          <td class="py-2 px-4 border">
+            <div class="space-y-1 grid grid-row-3">
+              <button type="button"
+                class="px-6 py-1 rounded bg-fuchsia-900 hover:bg-fuchsia-950 text-fuchsia-100 text-sm sm:text-lg border border-fuchsia-300">
+                <a href="${taskData.sourceLink}">Code</a>
+              </button>
+              <button type="button"
+                class="px-6 py-1 rounded bg-fuchsia-900 hover:bg-fuchsia-950 text-fuchsia-100 text-sm sm:text-lg border border-fuchsia-300">
+                <a href="${taskData.liveLink}">Live Preview</a>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>
