@@ -25,11 +25,10 @@ formEl.addEventListener("submit", (e) => {
     newXml.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             const data = JSON.parse(newXml.response);
-
             const profileView = `
             <div class="mt-5 flex space-x-10 items-center text-fuchsia-200 text-sm sm:text-xl bg-fuchsia-900 p-4 rounded border border-fuchsia-300">
             <img src="${data.avatar_url}" alt="profile avatar"
-            class="w-32 h-32 rounded-full border border-fuchsia-100">
+            class="w-32 h-32  rounded-full border border-fuchsia-100">
           <div class="space-y-2" id="confirm">
             <h4>👋Hi I am <span class="font-semibold">${data.name}</span></h4>
             <h4>Are you Looking for My Github Repository List ?</h4>
