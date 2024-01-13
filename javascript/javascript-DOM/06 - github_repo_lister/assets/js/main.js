@@ -1,5 +1,5 @@
 const formEl = document.forms["form"];
-const userNameEl = document.querySelector("#userName");
+const userNameEl = document.querySelector ("#userName");
 const profile = document.getElementById("profile");
 profile.style.display = "none";
 
