@@ -5,7 +5,7 @@ reloadBtnEl.style.display = "none";
 
 // reload btn
 reloadBtnEl.addEventListener("click", () => {
-    window.location.href = "/";
+    window.location.href = "./index.html";
 });
 
 // async function  
