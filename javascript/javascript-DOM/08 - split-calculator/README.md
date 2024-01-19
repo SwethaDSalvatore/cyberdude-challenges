@@ -22,7 +22,7 @@ FairSplit(÷/) is a web application that allows users to calculate the per-share
 
 ## Demo
 
-[Live Demo]()
+[Live Demo](https://swethadsalvatore.github.io/cyberdude-challenges/javascript/javascript-DOM/08%20-%20split-calculator/dist/)
 
 ## Features Added
 
