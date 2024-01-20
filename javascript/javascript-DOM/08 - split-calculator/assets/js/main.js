@@ -106,6 +106,7 @@ perPersonEl.addEventListener("click", async (e) => {
         localStorage.setItem("splitData", JSON.stringify(newSplitData))
     }
     getAllSplitData();
+    inputContainerEl.style.display = "none";
     formEl.reset();
 });
 
