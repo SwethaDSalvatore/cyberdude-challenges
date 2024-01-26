@@ -7,7 +7,7 @@
             <h4>Are you Looking for My Github Repository List ?</h4>
             <button type="submit"
               class="px-6 py-1 rounded bg-fuchsia-950 hover:bg-fuchsia-900 text-fuchsia-100 text-sm sm:text-lg border border-fuchsia-300">
-              <a href="${s.html_url}" target="blank">Yes</a></button>
+              <a href="https://github.com/${s.login}?tab=repositories" target="blank">Yes</a></button>
           </div>
           </div>
             `;n.style.display="block",n.innerHTML=e}},r.send()});

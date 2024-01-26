@@ -81,7 +81,6 @@ perPersonEl.addEventListener("click", async (e) => {
 
     };
 
-
     // local storage
 
     // creating new array
