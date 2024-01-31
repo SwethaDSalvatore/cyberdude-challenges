@@ -1,0 +1,61 @@
+[
+  {
+    "FullName": "Swetha Ramesh",
+    "Profession": "Web Developer",
+    "About": "Passionate about driving business growth through strategic marketing. Experienced in marketing and business outsourcing. Committed to continuous learning and blending non-technical expertise with emerging tech skills. Let's connect and explore opportunities together! 👋",
+    "SocialMedia": {
+      "Whatsapp": "tel:+91 8072625594",
+      "GitHub": "https://github.com/SwethaDSalvatore",
+      "Gmail":"mailto:swetharamesh35309@gmail.com",
+      "Instagram":"swetha_haashi"  
+    },
+    "EducationPg": {
+      "Name":"LOYOLA COLLEGE PU-LCS",
+      "Degree": "MBA - Marketing",
+      "Year": "2023, Completed"
+    },
+    "EducationUg": {
+      "Name":"STELLA MARIS COLLEGE",
+      "Degree": "Bachelor of Commerce",
+      "Year": "2020, Completed"
+    },
+    "School": {
+      "Name":"S.C.B.P JAIN SCHOOL",
+      "HSC": "HSC - 93%",
+      "SSLC": "SSLC - 88%"
+    },
+    "Experience": {
+      "Year":["2023 - present","2021 - 2023","2020 - 2021"],
+      "CompanyName": ["Cyberdude Networks Pvt Ltd","Capgemini Technology and Services","Alois Technology Pvt Ltd"],
+      "Position": ["Junior Fullstack Engineer","Database Administator","Digital Marketer"]
+    },
+
+
+    "Skills": [
+      {
+      "Skill": "HTML",
+      "Percentage": "85%"  
+    },
+    {
+      "Skill": "CSS",
+      "Percentage": "85%"  
+    },
+    {
+      "Skill": "Java Script",
+      "Percentage": "65%"  
+    },
+    {
+      "Skill": "MS Office",
+      "Percentage": "75%"  
+    },
+    {
+      "Skill": "SAP-MM",
+      "Percentage": "85%"  
+    },
+    {
+      "Skill": "Tally ERP",
+      "Percentage": "75%"  
+    }
+  ]
+  }
+]

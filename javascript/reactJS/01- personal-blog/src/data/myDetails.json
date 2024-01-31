@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title": "The Journey to Become a Web Engineer",
+      "desc": "I'm thrilled to embark on this journey as a commerce graduate, taking my first steps into the technical realm. Join me as I dive into the world of web engineering, eager to explore and learn.",
+      "img": "https://i.pinimg.com/564x/ca/e1/b4/cae1b4f6b223fe5a7bb712b680cffa67.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Starting from building a Foundation with HTML",
+      "desc": "Embarking on a journey of learning from scratch, I am excited to build a solid foundation with HTML. Join me and take first steps in my web development journey.",
+      "img": "https://i.pinimg.com/564x/ca/e1/b4/cae1b4f6b223fe5a7bb712b680cffa67.jpg"
+    },
+    {
+      "id": 3,
+      "title": "CSS Learning: Unleashing Creativity in Design",
+      "desc": "Embarking on the journey of CSS learning, I'm excited to channel my creativity into designing new projects. Join me and push the boundaries of design.",
+      "img": "https://i.pinimg.com/564x/96/d0/25/96d02512767883fb4130a494ef925e5b.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Explore My Creative CSS Projects - Built with Bootstrap and Tailwind CSS",
+      "desc": "Take a look at my sleek designs to responsive layouts, these projects showcase my skills and creativity in web development.",
+      "img": "https://i.pinimg.com/564x/96/d0/25/96d02512767883fb4130a494ef925e5b.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Beginning with JavaScript",
+      "desc": "Join me on my journey into web development as I dive into the world of JavaScript with excitement and thrill. Follow along as I take my first steps towards mastering this powerful language.",
+      "img": "https://i.pinimg.com/236x/5b/7b/24/5b7b2421eb83c312ae191d4d9e056d5d.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Created with Excitement and Learning",
+      "desc": "Delve into my collection of JavaScript projects, from interactive applications to innovative solutions, each project represents a milestone in my journey of mastering JavaScript.",
+      "img": "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"
+    }
+  ]
