@@ -7,7 +7,7 @@ const Footer = () => {
                         Networks Internship programme</p>
                 </div>
                 <div className="flex gap-x-3 justify-center">
-                    <a href="https://github.com/SwethaDSalvatore/" target="_blank" class="">
+                    <a href="https://github.com/SwethaDSalvatore/cyberdude-challenges/tree/main/javascript/reactJS" target="_blank" class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
                             class="fill fill-current w-7 text-white hover:text-neutral-200 hover:cursor-pointer">
                             <path fill-rule="evenodd"

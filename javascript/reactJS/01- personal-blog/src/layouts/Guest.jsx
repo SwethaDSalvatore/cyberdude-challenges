@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 const GuestLayout = () => {
     return (
-        <div className="bg-[#F9F5E7] min-h-screen">
+        <div className="">
             <TheNavbar />
             <div className="flex-row sm:flex">
             <Outlet />

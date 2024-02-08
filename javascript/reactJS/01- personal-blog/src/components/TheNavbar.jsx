@@ -6,7 +6,7 @@ const TheNavbar = () => {
         <ul className="flex space-x-4">
             <li className="text-white sm:text-base text-sm hover:text-slate-400"><Link to={'./'}>Home</Link></li>
             <li className="text-white sm:text-base text-sm hover:text-slate-400"><Link to={"./about"}>About</Link></li>
-            <li className="text-white sm:text-base text-sm hover:text-slate-400" ><a href="https://github.com/SwethaDSalvatore/" target="blank">Contact</a></li>
+            <li className="text-white sm:text-base text-sm hover:text-slate-400" ><Link to={"./contact"}>Contact</Link></li>
         </ul>
     </div>
 }
