@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "continent": "europe",
+    "countries": [
+      {
+        "countryName": "norway",
+        "countryDescr": "Tromsø, Norway - Located in an active solar area, at the centre of the Northern Light’s oval, Tromsø in Norway is a popular destination for aurora chasers"
+      },
+      {
+        "countryName": "netherlands",
+        "countryDescr": "The city is over 2000 years old –  the Romans built a fortress at what is now Dom Square, and buildings from the middle ages still stand in the city centre and it’s the most beautiful canal city in Europe."
+      },
+      {
+        "countryName": "switzerland",
+        "countryDescr": "When it comes to celebrating Christmas, Switzerland, with its snow-capped mountains, charming villages, and festive markets, is a winter wonderland like no other. Despite its small size, this idyllic country offers a variety of unique experiences you wouldn't want to miss."
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "continent": "asia",
+    "countries": [
+      {
+        "countryName": "india",
+        "countryDescr": "India is home to vibrant culture, intriguing history, rich traditions, religious sentiments, sacred sites, natural vistas, sun-washed beaches, and exotic wildlife sanctuaries. Some of my top bucket list is explore Hawal Mahel, Havelock Island, Amer Fort, Mecca Masjid, the Holy City of Varanasi, Agra Fort, the Ellora Caves, etc"
+      },
+      {
+        "countryName": "Indonesia",
+        "countryDescr": "A tropical water villas on islands, cultural diversity, vast landscapes, and sparkling beaches. From spine-chilling adventures to island-hopping, surreal rice terraces, and pristine lakes, Indonesia is a dream come true holiday destination."
+      },
+      {
+        "countryName": "Sri Lanka",
+        "countryDescr": "A gifted land of Gods, the hidden gem of South Asia, is one of the best countries to visit in Asia. Filled with a dizzying array of pristine beaches, picturesque topography, surreal landscapes, and mosaic islands, it boasts countless wonders."
+      }
+    ]
+  }
+]
