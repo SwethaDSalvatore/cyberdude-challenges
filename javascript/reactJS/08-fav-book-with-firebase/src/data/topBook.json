@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://kristinhannah.com/books/the-women/",
+    "img": "https://i.pinimg.com/564x/b9/49/60/b94960fa7bec7d7b9c9ba5fc80f44303.jpg",
+    "book": "The Women",
+    "description": "Kristin Hannah's novel- The Women focuses on women who volunteered as nurses during the Vietnam War.",
+    "rating": 4.7
+  },
+  {
+    "url": "https://read.sourcebooks.com/fiction/9781728296210-the-teacher-tp.html",
+    "img": "https://i.pinimg.com/564x/07/38/14/0738143e2b7bfa94bf69b6f6b45bfc98.jpg",
+    "book": "The Teacher",
+    "description": "From the New York Times bestselling author Freida McFadden comes a chilling story of twisted secrets and long-awaited revenge.",
+    "rating": 4.4
+  },
+  {
+    "url": "https://sarahjmaas.com/books/house-of-flame-and-shadow/",
+    "img": "https://i.pinimg.com/564x/dd/79/ec/dd79ec552c2568617cc8a0c32f21fe72.jpg",
+    "book": "House of Flame and Shadow",
+    "description": "“House of Flame and Shadow” is the long awaited third installment in the Crescent City series, continuing after the events of “House of Sky and Breath”.",
+    "rating": 4.3
+  }
+]
