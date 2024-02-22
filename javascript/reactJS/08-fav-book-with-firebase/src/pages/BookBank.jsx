@@ -1,14 +1,14 @@
 import React from "react";
-import Header from "../components/Header";
 import BookBankHome from "../components/BookBankHome";
-import AdopTable from "../components/AdopTable";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const BookBank = () => {
   return (
     <div>
-      <Header />
+      <Navbar />
       <BookBankHome />
-      <AdopTable />
+      <Footer/>
     </div>
   );
 };

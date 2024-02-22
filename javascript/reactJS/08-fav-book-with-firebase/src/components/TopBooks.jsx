@@ -9,8 +9,11 @@ const TopBooks = () => {
         </h1>
 
         <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:space-y-0 space-y-4">
-          {TopBookData.map((Data,index) => (
-            <div className="max-w-sm rounded-lg shadow bg-black border-black" key={index}>
+          {TopBookData.map((Data, index) => (
+            <div
+              className="max-w-sm rounded-lg shadow bg-black border-black"
+              key={index}
+            >
               <a href={Data.url}>
                 <img className="rounded-t-lg" src={Data.img} alt="" />
               </a>
@@ -20,7 +23,9 @@ const TopBooks = () => {
                     {Data.name}
                   </h5>
                 </a>
-                <p className="mb-3 font-normal text-gray-200">{Data.description}</p>
+                <p className="mb-3 font-normal text-gray-200">
+                  {Data.description}
+                </p>
                 <div className="flex items-center">
                   <svg
                     className="w-4 h-4 text-yellow-300 me-1"
@@ -76,6 +81,44 @@ const TopBooks = () => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="container mx-auto p-4 space-y-4">
+        <h1 className="text-xl text-red-500 font-semibold">
+          Which one do you suggest ?
+        </h1>
+        <div className="space-y-4">
+          <div className="flex items-center ps-4 border border-gray-200 rounded bg-red-500 hover:bg-red-600">
+            <input
+              id="bordered-radio-1"
+              type="radio"
+              value=""
+              name="bordered-radio"
+              className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+            />
+            <label
+              for="bordered-radio-1"
+              className="w-full py-4 ms-2 text-sm font-medium text-white"
+            >
+              The Lord of the Rings by J.R.R. Tolkien
+            </label>
+          </div>
+          <div className="flex items-center ps-4 border border-gray-200 rounded bg-red-500 hover:bg-red-600">
+            <input
+              checked
+              id="bordered-radio-2"
+              type="radio"
+              value=""
+              name="bordered-radio"
+              className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+            />
+            <label
+              for="bordered-radio-2"
+              className="w-full py-4 ms-2 text-sm font-medium text-white"
+            >
+              Harry Potter and the Philosopher’s Stone by J.K. Rowling
+            </label>
+          </div>
         </div>
       </div>
     </div>

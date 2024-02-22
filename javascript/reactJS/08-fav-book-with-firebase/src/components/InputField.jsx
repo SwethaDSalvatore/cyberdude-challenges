@@ -10,7 +10,7 @@ const InputField = ({ label, name, type, placeholder, pattern, required }) => {
         type={type}
         name={name}
         id={name}
-        className="bg-white border border-gray-300 text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5"
+        className="bg-white border border-gray-300 text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 capitalize"
         placeholder={placeholder}
         pattern={pattern}
         required={required}

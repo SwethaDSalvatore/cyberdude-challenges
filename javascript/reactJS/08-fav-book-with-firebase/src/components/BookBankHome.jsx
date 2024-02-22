@@ -30,12 +30,6 @@ const BookBankHome = () => {
     async function getDataFromFirebase() {
       const querySnapshot = await getDocs(collection(db, "donationData"));
       setFormValue(querySnapshot.docs.map((doc) => doc.data()));
-      // console.log(querySnapshot.docs[0].data());
-
-      // querySnapshot.forEach((doc) => {
-      //   console.log(`${doc.id} => ${doc.data()}`,doc.data());
-      // });
-
       if (querySnapshot.docs.length === 0) {
         console.log("No record exist");
       }
@@ -55,7 +49,7 @@ const BookBankHome = () => {
             Welcome To <span className="text-red-500">Bookiee </span>Bank
           </h1>
           <p className="sm:text-2xl text-center">
-            A Bank Where You Can Donate And Get Books, We Value Your Books.
+            A Bank Where You Can Donate Books, We Value Your Books.
           </p>
           <div className="">
             <form
@@ -64,10 +58,17 @@ const BookBankHome = () => {
             >
               {/* Input fields using InputField component */}
               <InputField
-                label="Book & Author Name"
+                label="Book Name"
                 name="book_name"
                 type="text"
                 placeholder="Harry Potter"
+                required
+              />
+              <InputField
+                label="Author Name"
+                name="author_name"
+                type="text"
+                placeholder="J. K. Rowling"
                 required
               />
               <InputField
@@ -118,7 +119,7 @@ const BookBankHome = () => {
                 type="submit"
                 className="text-white bg-blue-700 hover:bg-blue-800 font-semibold rounded-lg text-sm w-full sm:w-auto px-5 py-2 text-center"
               >
-                Submit
+                Donate
               </button>
             </form>
           </div>
@@ -126,8 +127,8 @@ const BookBankHome = () => {
       </div>
 
       <div className="container mx-auto p-4">
-        <h1 className="sm:text-2xl text-center sm:font-semibold">
-          Every Book Finds a Loving Home, Let's Adopt
+        <h1 className="sm:text-2xl text-center sm:font-semibold pt-4 pb-4">
+          Every Book Finds a Loving Home, Let's Donate
         </h1>
 
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-4">
@@ -139,6 +140,9 @@ const BookBankHome = () => {
                 </th>
                 <th scope="col" className="px-6 py-3">
                   Book Name
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Author Name
                 </th>
                 <th scope="col" className="px-6 py-3">
                   Doner Name
@@ -160,18 +164,24 @@ const BookBankHome = () => {
                   className="odd:bg-white  bg-red-200 border-b border-gray-700"
                   key={index}
                 >
-                  <td className="px-6 py-4">{index}</td>
+                  <td className="px-6 py-4">{index+1}</td>
                   <th
                     scope="row"
                     className="px-6 py-4 font-medium  whitespace-nowrap "
                   >
                     {formData.book_name}
                   </th>
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium  whitespace-nowrap "
+                  >
+                    {formData.author_name}
+                  </th>
                   <td className="px-6 py-4">{formData.donor_name}</td>
-                  <td className="px-6 py-4">{formData.email}</td>
                   <td className="px-6 py-4">{formData.phone}</td>
-                  <td className="px-6 py-4 font-medium text-green-500 hover:underline">
-                    Adopt
+                  <td className="px-6 py-4">{formData.email}</td>                 
+                  <td className="px-6 py-4 font-medium text-green-700 hover:underline cursor-pointer" onClick={() => alert("Thanks for you request, will let you know the status soon..!")}>
+                    Check Status
                   </td>
                 </tr>
               ))}
