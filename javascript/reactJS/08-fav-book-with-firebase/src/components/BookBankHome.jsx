@@ -14,17 +14,21 @@ const BookBankHome = () => {
     formData.forEach((value, key) => {
       formObject[key] = value;
     });
-
+  
     try {
       const docRef = await addDoc(collection(db, "donationData"), formObject);
       console.log("Document written with ID: ", docRef.id);
-      alert("Thanks for you contribution😊");
+      alert("Thanks for your contribution😊");
+      
+      // Update formValue state with the new document
+      setFormValue([...formValue, formObject]);
     } catch (e) {
       console.error("Error adding document: ", e);
     }
     event.target.reset();
     console.log(formObject);
   };
+  
 
   useEffect(() => {
     async function getDataFromFirebase() {
