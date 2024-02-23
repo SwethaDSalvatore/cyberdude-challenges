@@ -34,7 +34,6 @@ const Category = () => {
           <div className="pl-5">
             
             <div className=" space-y-2">
-              {/* Loop through Categories array */}
               {Categories.map((category, index) => (
                 <div
                   key={index}

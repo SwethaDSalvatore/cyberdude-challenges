@@ -7,9 +7,9 @@ const Header = () => {
       <div className="cotainer mx-auto p-4">
         <main className="sm:grid sm:grid-cols-2 justify-center items-center">
           <div className=" font-custom text-black sm:pl-5 space-y-4 text-center">
-            <h1 className=" text-xl">
+            <h1 className=" text-2xl">
               Unlock the World of Words with{" "}
-              <span className="text-xl font-custom text-red-400 font-semibold">
+              <span className="text-2xl font-custom text-red-400 font-semibold">
                 Bookiee
               </span>
             </h1>
