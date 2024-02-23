@@ -3,6 +3,7 @@ import InputField from "./InputField";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { useState } from "react";
+import { doc, deleteDoc } from "firebase/firestore";
 
 const BookBankHome = () => {
   const [formValue, setFormValue] = useState([]);
@@ -14,12 +15,12 @@ const BookBankHome = () => {
     formData.forEach((value, key) => {
       formObject[key] = value;
     });
-  
+
     try {
       const docRef = await addDoc(collection(db, "donationData"), formObject);
       console.log("Document written with ID: ", docRef.id);
       alert("Thanks for your contribution😊");
-      
+
       // Update formValue state with the new document
       setFormValue([...formValue, formObject]);
     } catch (e) {
@@ -28,14 +29,41 @@ const BookBankHome = () => {
     event.target.reset();
     console.log(formObject);
   };
+
+  const handleDelete = async (index) => {
+    try {
+      console.log("Deleting document at index:", index);
+      console.log("Form value before deletion:", formValue);
+      
+      const docIdToDelete = formValue[index]?.docId;
+      console.log("Document ID to delete:", docIdToDelete);
+      
+      if (docIdToDelete) {
+        await deleteDoc(doc(db, "donationData", docIdToDelete));
+        console.log("Document deleted successfully");
   
+        // Update formValue state by removing the deleted document
+        setFormValue(prevFormValue => prevFormValue.filter((_, i) => i !== index));
+        console.log("Form value after deletion:", formValue);
+      } else {
+        console.error("Document ID is undefined or null");
+      }
+    } catch (error) {
+      console.error("Error deleting document: ", error);
+    }
+  };
 
   useEffect(() => {
     async function getDataFromFirebase() {
       const querySnapshot = await getDocs(collection(db, "donationData"));
-      setFormValue(querySnapshot.docs.map((doc) => doc.data()));
+      setFormValue(
+        querySnapshot.docs.map((doc) => ({
+          docId: doc.id, // Set the document ID
+          ...doc.data()
+        }))
+      );
       if (querySnapshot.docs.length === 0) {
-        console.log("No record exist");
+        console.log("No record exists");
       }
     }
     getDataFromFirebase();
@@ -168,7 +196,7 @@ const BookBankHome = () => {
                   className="odd:bg-white  bg-red-200 border-b border-gray-700"
                   key={index}
                 >
-                  <td className="px-6 py-4">{index+1}</td>
+                  <td className="px-6 py-4">{index + 1}</td>
                   <th
                     scope="row"
                     className="px-6 py-4 font-medium  whitespace-nowrap "
@@ -183,9 +211,12 @@ const BookBankHome = () => {
                   </th>
                   <td className="px-6 py-4">{formData.donor_name}</td>
                   <td className="px-6 py-4">{formData.phone}</td>
-                  <td className="px-6 py-4">{formData.email}</td>                 
-                  <td className="px-6 py-4 font-medium text-green-700 hover:underline cursor-pointer" onClick={() => alert("Thanks for you request, will let you know the status soon..!")}>
-                    Check Status
+                  <td className="px-6 py-4">{formData.email}</td>
+                  <td
+                    className="px-6 py-4 font-medium text-green-700 hover:underline cursor-pointer"
+                    onClick={() => handleDelete(index)}
+                  >
+                    Delete
                   </td>
                 </tr>
               ))}
