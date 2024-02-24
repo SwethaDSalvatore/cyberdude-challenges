@@ -1,12 +1,34 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import InputField from "./InputField";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  addDoc,
+  doc as firestoreDoc,
+  updateDoc,
+} from "firebase/firestore";
 import { db } from "../firebase";
-import { useState } from "react";
-import { doc, deleteDoc } from "firebase/firestore";
+import { deleteDoc } from "firebase/firestore";
 
 const BookBankHome = () => {
   const [formValue, setFormValue] = useState([]);
+  const [editIndex, setEditIndex] = useState(null);
+
+  useEffect(() => {
+    async function getDataFromFirebase() {
+      const querySnapshot = await getDocs(collection(db, "donationData"));
+      setFormValue(
+        querySnapshot.docs.map((doc) => ({
+          docId: doc.id,
+          ...doc.data(),
+        }))
+      );
+      if (querySnapshot.docs.length === 0) {
+        console.log("No record exists");
+      }
+    }
+    getDataFromFirebase();
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -17,34 +39,47 @@ const BookBankHome = () => {
     });
 
     try {
-      const docRef = await addDoc(collection(db, "donationData"), formObject);
-      console.log("Document written with ID: ", docRef.id);
-      alert("Thanks for your contribution😊");
+      if (editIndex !== null) {
+        // If editIndex is not null, it means we're editing an existing entry
+        const docIdToUpdate = formValue[editIndex].docId;
+        await updateDoc(
+          firestoreDoc(db, "donationData", docIdToUpdate),
+          formObject
+        );
+        console.log("Document updated successfully");
+        setEditIndex(null); // Reset editIndex after editing
+      } else {
+        // If editIndex is null, it means we're adding a new entry
+        const docRef = await addDoc(collection(db, "donationData"), formObject);
+        console.log("Document written with ID: ", docRef.id);
+        alert("Thanks for your contribution😊");
+      }
 
-      // Update formValue state with the new document
-      setFormValue([...formValue, formObject]);
+      // Update formValue state with the new document or updated document
+      setFormValue((prevFormValue) => {
+        const updatedFormValue = [...prevFormValue];
+        if (editIndex !== null) {
+          updatedFormValue[editIndex] = formObject; // Update existing entry
+        } else {
+          updatedFormValue.push(formObject); // Add new entry
+        }
+        return updatedFormValue;
+      });
     } catch (e) {
-      console.error("Error adding document: ", e);
+      console.error("Error adding/updating document: ", e);
     }
     event.target.reset();
-    console.log(formObject);
   };
 
   const handleDelete = async (index) => {
     try {
-      console.log("Deleting document at index:", index);
-      console.log("Form value before deletion:", formValue);
-      
       const docIdToDelete = formValue[index]?.docId;
-      console.log("Document ID to delete:", docIdToDelete);
-      
       if (docIdToDelete) {
-        await deleteDoc(doc(db, "donationData", docIdToDelete));
-        console.log("Document deleted successfully");
-  
-        // Update formValue state by removing the deleted document
-        setFormValue(prevFormValue => prevFormValue.filter((_, i) => i !== index));
-        console.log("Form value after deletion:", formValue);
+        await deleteDoc(firestoreDoc(db, "donationData", docIdToDelete));
+        alert("Document deleted successfully");
+        setFormValue((prevFormValue) =>
+          prevFormValue.filter((_, i) => i !== index)
+        );
       } else {
         console.error("Document ID is undefined or null");
       }
@@ -53,13 +88,25 @@ const BookBankHome = () => {
     }
   };
 
+  const handleEdit = (index) => {
+    alert("Check the form and do you edit")
+    setEditIndex(index);
+    // Populate the form fields with the data of the item being edited
+    const formData = formValue[index];
+    document.getElementById("book_name").value = formData.book_name;
+    document.getElementById("author_name").value = formData.author_name;
+    document.getElementById("donor_name").value = formData.donor_name;
+    document.getElementById("phone").value = formData.phone;
+    document.getElementById("email").value = formData.email;
+  };
+
   useEffect(() => {
     async function getDataFromFirebase() {
       const querySnapshot = await getDocs(collection(db, "donationData"));
       setFormValue(
         querySnapshot.docs.map((doc) => ({
           docId: doc.id, // Set the document ID
-          ...doc.data()
+          ...doc.data(),
         }))
       );
       if (querySnapshot.docs.length === 0) {
@@ -185,7 +232,7 @@ const BookBankHome = () => {
                 <th scope="col" className="px-6 py-3">
                   Doner Email ID
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-3 text-center">
                   Action
                 </th>
               </tr>
@@ -212,11 +259,19 @@ const BookBankHome = () => {
                   <td className="px-6 py-4">{formData.donor_name}</td>
                   <td className="px-6 py-4">{formData.phone}</td>
                   <td className="px-6 py-4">{formData.email}</td>
-                  <td
-                    className="px-6 py-4 font-medium text-green-700 hover:underline cursor-pointer"
-                    onClick={() => handleDelete(index)}
-                  >
-                    Delete
+                  <td className="px-6 py-4 font-medium cursor-pointer flex items-center justify-center space-x-2 ">
+                    <button
+                      className="px-4 py-2 bg-red-500 hover:bg-red-600 rounded-lg text-white"
+                      onClick={() => handleDelete(index)}
+                    >
+                      Delete
+                    </button>
+                    <button
+                      className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 rounded-lg text-white"
+                      onClick={() => handleEdit(index)}
+                    >
+                      Edit
+                    </button>
                   </td>
                 </tr>
               ))}
