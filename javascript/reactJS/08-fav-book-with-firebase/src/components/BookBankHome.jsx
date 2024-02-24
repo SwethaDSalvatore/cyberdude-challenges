@@ -89,7 +89,7 @@ const BookBankHome = () => {
   };
 
   const handleEdit = (index) => {
-    alert("Check the form and do you edit")
+    alert("Check the form and do you edit");
     setEditIndex(index);
     // Populate the form fields with the data of the item being edited
     const formData = formValue[index];
@@ -191,7 +191,6 @@ const BookBankHome = () => {
                   <a href="#" className="hover:underline text-black">
                     terms and conditions
                   </a>
-                  .
                 </label>
               </div>
               <button
@@ -259,19 +258,29 @@ const BookBankHome = () => {
                   <td className="px-6 py-4">{formData.donor_name}</td>
                   <td className="px-6 py-4">{formData.phone}</td>
                   <td className="px-6 py-4">{formData.email}</td>
-                  <td className="px-6 py-4 font-medium cursor-pointer flex items-center justify-center space-x-2 ">
-                    <button
-                      className="px-4 py-2 bg-red-500 hover:bg-red-600 rounded-lg text-white"
-                      onClick={() => handleDelete(index)}
-                    >
-                      Delete
-                    </button>
-                    <button
-                      className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 rounded-lg text-white"
+                  <td className="px-6 py-4 font-medium cursor-pointer flex items-center justify-center space-x-6 ">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      className="w-7 text-yellow-500 hover:text-yellow-600 fill-current"
                       onClick={() => handleEdit(index)}
                     >
-                      Edit
-                    </button>
+                      <path
+                        fill="currentColor"
+                        d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h8.925l-2 2H5v14h14v-6.95l2-2V19q0 .825-.587 1.413T19 21zm4-6v-4.25l9.175-9.175q.3-.3.675-.45t.75-.15q.4 0 .763.15t.662.45L22.425 3q.275.3.425.663T23 4.4q0 .375-.137.738t-.438.662L13.25 15zM21.025 4.4l-1.4-1.4zM11 13h1.4l5.8-5.8l-.7-.7l-.725-.7L11 11.575zm6.5-6.5l-.725-.7zl.7.7z"
+                      ></path>
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      className="w-7 text-red-500 hover:text-red-600 fill-current"
+                      onClick={() => handleDelete(index)}
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M7 21q-.825 0-1.412-.587T5 19V6q-.425 0-.712-.288T4 5q0-.425.288-.712T5 4h4q0-.425.288-.712T10 3h4q.425 0 .713.288T15 4h4q.425 0 .713.288T20 5q0 .425-.288.713T19 6v13q0 .825-.587 1.413T17 21zM17 6H7v13h10zm-7 11q.425 0 .713-.288T11 16V9q0-.425-.288-.712T10 8q-.425 0-.712.288T9 9v7q0 .425.288.713T10 17m4 0q.425 0 .713-.288T15 16V9q0-.425-.288-.712T14 8q-.425 0-.712.288T13 9v7q0 .425.288.713T14 17M7 6v13z"
+                      ></path>
+                    </svg>
                   </td>
                 </tr>
               ))}
