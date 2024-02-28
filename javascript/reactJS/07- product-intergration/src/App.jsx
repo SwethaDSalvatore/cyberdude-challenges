@@ -47,6 +47,17 @@ const App = () => {
           <Data menu={menu} />
         </div>
       </section>
+      <footer>
+      <div>
+        <p className="text-center text-green-800 mt-60">
+          Designed by{" "}
+          <a href="https://swethadsalvatore.github.io/" class="text-black font-semibold hover:underline" target="blank">
+            Swetha Ramesh{" "}
+          </a>{" "}
+          for CyberDude Networks Internship programme
+        </p>
+      </div>
+      </footer>
     </div>
   );
 };
