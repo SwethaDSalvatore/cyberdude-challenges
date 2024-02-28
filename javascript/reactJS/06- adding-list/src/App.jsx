@@ -95,6 +95,15 @@ const App = () => {
           </ul>
         </div>
       </div>
+      <div>
+        <p className="text-center text-yellow-400 mt-60">
+          Designed by{" "}
+          <a href="https://swethadsalvatore.github.io/" class="text-white font-semibold hover:underline" target="blank">
+            Swetha Ramesh{" "}
+          </a>{" "}
+          for CyberDude Networks Internship programme
+        </p>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <div>
-            <div className="mt-4 lg:mx-0 p-4 text-[11px] text-center sm:text-md text-sm text-white bg-gradient-to-r bg-[#7B2869] sm:flex justify-between items-center">
+            <div className=" mt-4 lg:mx-0 p-4 text-[11px] text-center sm:text-md text-sm text-white bg-gradient-to-r bg-[#7B2869] sm:flex justify-between items-center">
                 <div>
                     <p>Designed by <span class="text-white font-semibold underline">Swetha Ramesh </span> for CyberDude
                         Networks Internship programme</p>
