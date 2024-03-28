@@ -52,7 +52,6 @@ perPersonEl.addEventListener("click", async (e) => {
     const url = api.replace("[base]", fromCurrencyValue);
     const billAmount = billAmountEl.value;
     const members = membersEl.value;
-
     // async function  
     async function getcurrencyData() {
         try {
@@ -60,6 +59,7 @@ perPersonEl.addEventListener("click", async (e) => {
             const jsonData = await response.json();
             return jsonData;
         } catch (error) {
+            alert("Value cannot be empty, Please fill all the information!")
             console.error("Network error: ", error);
         }
     }
@@ -80,6 +80,8 @@ perPersonEl.addEventListener("click", async (e) => {
         toCurrecy: toCurrencyEl.value
 
     };
+
+    console.log(SplitDataObj);
 
     // local storage
 
