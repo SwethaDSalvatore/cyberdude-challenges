@@ -56,6 +56,7 @@ const App = () => {
               <label className="block">Time</label>
               <input
                 className="border border-gray-300 px-4 py-1 rounded outline-none "
+                type='time'
                 placeholder="time"
                 onChange={handleTime}
               />
