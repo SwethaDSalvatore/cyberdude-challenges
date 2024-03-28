@@ -59,7 +59,7 @@ perPersonEl.addEventListener("click", async (e) => {
             const jsonData = await response.json();
             return jsonData;
         } catch (error) {
-            alert("Value cannot be empty, Please fill all the information!")
+            alert("Please fill all the information!")
             console.error("Network error: ", error);
         }
     }
